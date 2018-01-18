@@ -17,7 +17,7 @@ app.use(function(err, req, res, next){
   res.status(500).send('Something bad happened!');
 });
 
-var io = require('socket.io').listen(server); //SocketIO - Seccion 1
+var io = require('socket.io').listen(app); //SocketIO - Seccion 1
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
